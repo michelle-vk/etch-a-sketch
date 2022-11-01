@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 800px;
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  background-color: tomato;
+  display: inline-block;
+}
