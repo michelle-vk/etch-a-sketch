@@ -4,6 +4,13 @@ body {
   align-items: center;
   margin: auto;
   width: 800px;
+  font-size: 0px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 50px;
 }
 
 .square {
