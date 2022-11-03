@@ -33,8 +33,6 @@ button.btn:hover {
 }
 
 .square {
-  width: 25px;
-  height: 25px;
   border: 1px solid black;
   box-sizing: border-box;
   background-color: white;
