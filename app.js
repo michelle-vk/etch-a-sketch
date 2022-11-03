@@ -1,7 +1,9 @@
-function createGrid() {
+function createGrid(numOfSquares = 16) {
+  container.innerHTML = "";
   const squares = [];
-  for(let i = 0; i < 16; i++) {
-    for(let j = 0; j < 16; j++) {
+
+  for(let i = 0; i < numOfSquares; i++) {
+    for(let j = 0; j < numOfSquares; j++) {
       const square = document.createElement("div");
       square.classList.add("square");
       container.appendChild(square);
@@ -10,7 +12,9 @@ function createGrid() {
     }
     container.append(document.createElement('br'));
   }
-  prepareSquares(squares)
+
+  prepareSquares(squares);
+  btnClickHandler();
 }
 
 function prepareSquares(squares) {
@@ -26,6 +30,22 @@ function fillSquare(square) {
   square.classList.add("filled-square");
 }
 
+function btnClickHandler() {
+  button.addEventListener("click", createFormattedGrid);
+}
+
+function createFormattedGrid() {
+  let gridSize = prompt("How big do you want the grid to be?");
+  Number(gridSize);
+
+  if(gridSize > 100) {
+    gridSize = prompt("Please enter a number between 1 and 100");
+  } else {
+    createGrid(gridSize);
+  }
+}
+
 const container = document.querySelector(".container");
+const button = document.querySelector(".btn");
 
 createGrid();

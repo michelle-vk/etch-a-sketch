@@ -3,7 +3,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: auto;
-  width: 800px;
+  width: 960px;
   font-size: 0px;
 }
 
@@ -35,6 +35,7 @@ button.btn:hover {
 .square {
   width: 25px;
   height: 25px;
+  border: 1px solid black;
   box-sizing: border-box;
   background-color: white;
   display: inline-block;
