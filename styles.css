@@ -10,7 +10,22 @@ body {
 h1 {
   font-size: 48px;
   font-weight: 400;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+button.btn {
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+button.btn:hover {
+  cursor: pointer;
+  background-color: #ff0000c9;
 }
 
 .container {
@@ -21,7 +36,6 @@ h1 {
   width: 25px;
   height: 25px;
   box-sizing: border-box;
-  /* border: 1px solid black; */
   background-color: white;
   display: inline-block;
 }
