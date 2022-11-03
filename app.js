@@ -10,10 +10,10 @@ function createGrid() {
     }
     container.append(document.createElement('br'));
   }
-  drawLineOfSquares(squares)
+  prepareSquares(squares)
 }
 
-function drawLineOfSquares(squares) {
+function prepareSquares(squares) {
   // Loop over the array squares with forEach array method and set event listener on each square
   squares.forEach(square => {
     // event listener will call fillSquare function when mouse enters a square

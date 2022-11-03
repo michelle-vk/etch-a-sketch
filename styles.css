@@ -13,15 +13,19 @@ h1 {
   margin-bottom: 50px;
 }
 
+.container {
+  border: 1px solid black;
+}
+
 .square {
   width: 25px;
   height: 25px;
   box-sizing: border-box;
-  border: 1px solid black;
-  background-color: tomato;
+  /* border: 1px solid black; */
+  background-color: white;
   display: inline-block;
 }
 
 .filled-square {
-  background-color: thistle;
+  background-color: black;
 }
