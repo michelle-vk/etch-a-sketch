@@ -10,7 +10,20 @@ function createGrid() {
     }
     container.append(document.createElement('br'));
   }
-  return squares;
+  drawLineOfSquares(squares)
+}
+
+function drawLineOfSquares(squares) {
+  // Loop over the array squares with forEach array method and set event listener on each square
+  squares.forEach(square => {
+    // event listener will call fillSquare function when mouse enters a square
+    square.addEventListener("mouseover", (event) => fillSquare(event.currentTarget));
+  })
+}
+
+function fillSquare(square) {
+  // add class filled-square for styling when mouse enters a square
+  square.classList.add("filled-square");
 }
 
 const container = document.querySelector(".container");

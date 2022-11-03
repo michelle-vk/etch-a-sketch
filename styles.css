@@ -21,3 +21,7 @@ h1 {
   background-color: tomato;
   display: inline-block;
 }
+
+.filled-square {
+  background-color: thistle;
+}
