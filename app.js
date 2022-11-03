@@ -41,11 +41,11 @@ function createFormattedGrid() {
   let gridSize = prompt("How big do you want the grid to be?");
   Number(gridSize);
 
-  if(gridSize > 100) {
+  while(gridSize > 100 || gridSize <= 0) {
     gridSize = prompt("Please enter a number between 1 and 100");
-  } else {
-    createGrid(gridSize);
-  }
+  } 
+  createGrid(gridSize);
+  
 }
 
 const container = document.querySelector(".container");
