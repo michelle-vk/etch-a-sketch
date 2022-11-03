@@ -14,8 +14,9 @@ h1 {
 }
 
 .square {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
   border: 1px solid black;
   background-color: tomato;
   display: inline-block;
