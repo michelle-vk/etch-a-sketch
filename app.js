@@ -5,7 +5,7 @@ function createGrid(numOfSquares = 16) {
   for(let i = 0; i < numOfSquares; i++) {
     for(let j = 0; j < numOfSquares; j++) {
       const square = document.createElement("div");
-      const sizeOfSquare = `${(960 / numOfSquares) - 2}px`;
+      const sizeOfSquare = `${ 960 / numOfSquares }px`;
       square.style.width = sizeOfSquare;
       square.style.height = sizeOfSquare;
       square.classList.add("square");
