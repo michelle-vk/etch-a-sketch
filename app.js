@@ -22,14 +22,17 @@ function createGrid(numOfSquares = 16) {
 function prepareSquares(squares) {
   // Loop over the array squares with forEach array method and set event listener on each square
   squares.forEach(square => {
-    // event listener will call fillSquare function when mouse enters a square
+    // Event listener will call fillSquare function when mouse enters a square
     square.addEventListener("mouseover", (event) => fillSquare(event.currentTarget));
   })
 }
 
 function fillSquare(square) {
-  // add class filled-square for styling when mouse enters a square
-  square.classList.add("filled-square");
+  // Create random background color when mouse enters a square
+  const r = Math.floor(Math.random() * 255) + 1;
+  const g = Math.floor(Math.random() * 255) + 1;
+  const b = Math.floor(Math.random() * 255) + 1;
+  square.style.backgroundColor = `rgb(${r},${g},${b})`;
 }
 
 function btnClickHandler() {
@@ -37,11 +40,11 @@ function btnClickHandler() {
 }
 
 function createFormattedGrid() {
-  let gridSize = prompt("How big do you want the grid to be?");
+  let gridSize = prompt("How big do you want the grid to be? Choose a number between 0 and 100");
   Number(gridSize);
 
   while(gridSize > 100 || gridSize <= 0) {
-    gridSize = prompt("Please enter a number between 1 and 100");
+    gridSize = prompt("Please enter a number between 0 and 100");
   } 
   createGrid(gridSize);
   
