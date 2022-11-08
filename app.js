@@ -13,7 +13,6 @@ function createGrid(numOfSquares = 16) {
       // Push the squares in an array so it can be returned and used in another function
       squares.push(square);
     }
-    container.append(document.createElement('br'));
   }
 
   prepareSquares(squares);
