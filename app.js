@@ -33,9 +33,13 @@ function fillSquare(square) {
   const r = Math.floor(Math.random() * 255) + 1;
   const g = Math.floor(Math.random() * 255) + 1;
   const b = Math.floor(Math.random() * 255) + 1;
-  square.style.backgroundColor = `rgb(${r},${g},${b})`;
 
-  makeSquareDarker(square);
+  // Set backgroundColor in an if statement to prevent the function from 
+  // overwriting the backgroundColor of a square with a different color
+  if (square.style.backgroundColor === "") {
+    const squareColor = `rgb(${r},${g},${b})`;
+    square.style.backgroundColor = squareColor;    
+  } else makeSquareDarker(square);
 }
 
 function makeSquareDarker(square) {
