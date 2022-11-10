@@ -34,6 +34,18 @@ function fillSquare(square) {
   const g = Math.floor(Math.random() * 255) + 1;
   const b = Math.floor(Math.random() * 255) + 1;
   square.style.backgroundColor = `rgb(${r},${g},${b})`;
+
+  makeSquareDarker(square);
+}
+
+function makeSquareDarker(square) {
+  // Makes a square darker by 10% every time the mouseover event is triggered
+  if(square.style.filter === ''){
+    square.style.filter = `brightness(100%)`;  
+  } else {
+    const currentValue = Number.parseInt(square.style.filter.match(/\d+/).pop());
+    square.style.filter = `brightness(${currentValue-10}%)`;
+  }
 }
 
 function createFormattedGrid() {
